@@ -1,0 +1,74 @@
+<!-- src/templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Recommendation System</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <script defer src="/static/js/main.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Movie Recommendation System</h1>
+        <div id="notification" class="notification"></div>
+        <div id="loading-spinner" class="loading-spinner"></div>
+
+        <div class="main-content">
+            <!-- Left Sidebar for User Selection and Get Recommendations -->
+            <div class="sidebar left-sidebar">
+                <div class="section">
+                    <h3>User Management</h3>
+                    <label for="user">Select User:</label>
+                    <select id="user"></select>
+                </div>
+                <div class="section">
+                    <button onclick="getRecommendations()">Get Recommendations</button>
+                </div>
+            </div>
+
+          
+            <div class="results-section">
+                <div id="dashboard">
+                    <h2>Recommendations:</h2>
+                    <div id="recommendations" class="results-container"></div>
+                    <h2>Explanations:</h2>
+                    <div id="explanations" class="results-container"></div>
+                    <h2>Similar Users:</h2>
+                    <div id="similar-users" class="results-container"></div>
+                    <h2>Viewing History:</h2>
+                    <div id="viewing-history" class="results-container"></div>
+                </div>
+            </div>
+
+            
+            <div class="sidebar right-sidebar">
+                <div class="section">
+                    <h3>Add User</h3>
+                    <label for="newUser">Add New User:</label>
+                    <input type="text" id="newUser" placeholder="e.g., John">
+                    <button onclick="addUser()">Add User</button>
+                </div>
+                <div class="section">
+                    <h3>Preferences & Ratings</h3>
+                    <label for="newGenre">Add Genre Preference:</label>
+                    <input type="text" id="newGenre" placeholder="e.g., Comedy">
+                    <button onclick="updatePreferences()">Update Preferences</button>
+                </div>
+                <div class="section">
+                    <label for="movie-to-rate">Rate a Movie:</label>
+                    <select id="movie-to-rate"></select>
+                    <input type="number" id="rating-value" min="1" max="10" placeholder="Rating (1-10)">
+                    <button onclick="addRating()">Submit Rating</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chatbot Question Input at Bottom -->
+        <div class="chatbot-section">
+            <label for="question">Ask the Movie Bot:</label>
+            <input type="text" id="question" placeholder="e.g., Does Alice like Sci-Fi movies?">
+            <button onclick="parseQuery()">Ask</button>
+        </div>
+    </div>
+</body>
+</html>
