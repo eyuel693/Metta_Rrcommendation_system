@@ -286,25 +286,25 @@
 
 ; ——— QUERIES ———
 ; Basic recommendations
-!(recommend-to alice $movie)
-!(recommend-to bob $movie)
-!(recommend-to eve $movie)
+;!(recommend-to alice $movie)
+;!(recommend-to bob $movie)
+;!(recommend-to eve $movie)
 
 
 
 ; Similar users
-!(similar-users alice $user)
-!(similar-users bob $user)
-!(similar-users eve $user)
+;!(similar-users alice $user)
+;!(similar-users bob $user)
+;!(similar-users eve $user)
 
 
 ; Rating queries
-!(get-rating the-matrix $score)
-!(get-rating inception $score)
-!(get-rating titanic $score)
+;!(get-rating the-matrix $score)
+;!(get-rating inception $score)
+;!(get-rating titanic $score)
 !(content-similarity alice $movie)
 
 
-!(match &self (watched $user $movie) $user)
+;!(match &self (watched $user $movie) $user)
 
-!(explain-collab eve $movie $explanation)
+;!(explain-collab eve $movie $explanation)
